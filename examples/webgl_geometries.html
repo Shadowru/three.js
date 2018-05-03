@@ -127,8 +127,15 @@
 				scene.add( object );
 
 				object = new THREE.Mesh( new THREE.TorusKnotBufferGeometry( 50, 10, 50, 20 ), material );
-				object.position.set( 300, 0, - 200 );
+				object.position.set( 300, 150, - 200 );
 				scene.add( object );
+
+                object = new THREE.Building(10, 100, 10, 5);
+
+                object.position.set( 400, 0, - 200 );
+
+                scene.add( object );
+                //scene.add( object );
 
 				//
 

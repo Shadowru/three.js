@@ -13,21 +13,18 @@ function Building( width, height, depth, levels ) {
 		width: width,
 		height: height,
 		depth: depth,
-		widthSegments: 1,
-		heightSegments: levels,
-		depthSegments: 1
+		levels: levels
 	};
 
-	this.parameters.heightSegments = Math.floor( heightSegments ) || 1;
-
+	this.parameters.levels = Math.floor( levels ) || 1;
 
 	this.geometry = new BoxBufferGeometry(
 		this.parameters.width,
 		this.parameters.height,
 		this.parameters.depth,
-		this.parameters.widthSegments,
-		this.parameters.heightSegments,
-		this.parameters.depthSegments );
+		1,
+		this.parameters.levels,
+		1 );
 	this.material = new MeshBasicMaterial( { color: Math.random() * 0xffffff } );
 
 	this.drawMode = TrianglesDrawMode;
